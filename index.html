@@ -26,13 +26,13 @@
     mapboxgl.accessToken = 'pk.eyJ1IjoiandpbmRlciIsImEiOiJjamx3Z2FjaGMxNjEyM2twZW5haW91ZDAwIn0.oA-wC2ZyJ0EgLDHWb_POCg'; // replace this with your access token
     var map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/jwinder/cjxqedz6p09d81clh6b2clla9', // replace this with your style URL
+      style: 'mapbox://styles/jwinder/cjxza1y2k08lb1csawoehhqcj', // replace this with your style URL
       center: [-87.661557, 41.893748],
       zoom: 10.7
     });
     map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
-    layers: ['ultra50cities'] // replace this with the name of the layer
+    layers: ['geocodedcitiesv2'] // replace this with the name of the layer
   });
 
   if (!features.length) {
@@ -50,4 +50,3 @@
     </script>
   </body>
 </html>
-
